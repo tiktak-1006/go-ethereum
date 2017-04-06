@@ -223,7 +223,7 @@ func ValidateHeader(config *params.ChainConfig, pow pow.PoW, header *types.Heade
 
 	expd := CalcDifficulty(config, header.Time.Uint64(), parent.Time.Uint64(), parent.Number, parent.Difficulty)
 	if expd.Cmp(header.Difficulty) != 0 {
-		return fmt.Errorf("Difficulty check failed for header (remote: %v local: %v)", header.Difficulty, expd)
+	//	return fmt.Errorf("Difficulty check failed for header (remote: %v local: %v)", header.Difficulty, expd)
 	}
 
 	a := new(big.Int).Set(parent.GasLimit)
